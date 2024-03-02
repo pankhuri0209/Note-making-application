@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="/" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Note making application</title>
+
+    <link rel="stylesheet" href="main.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta name="description" content="Note making application" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="js/app.js"></script>
+  </head>
+
+  <body>
+    <div id="notes-list"></div>
+    <!-- <button onclick="createNote()">Create Note</button> -->
+
+    <div id="note-details" style="display: none">
+      <input type="text" id="note-title" placeholder="Title" /><br />
+      <textarea id="note-content" placeholder="Content"></textarea><br />
+      <input type="text" id="action-item" placeholder="Action Item" />
+      <button onclick="addActionItem()">Add Action Item</button>
+      <div id="action-items-list"></div>
+      <button onclick="saveNote()">Save</button>
+    </div>
+
+    <button id="openModalBtn">Create a Note</button>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modalContent"></div>
+        <div class="footer-container">
+          <div class="modal-footer">
+            Current Date: <span id="current-date"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

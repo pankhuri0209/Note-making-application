@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes List</title>
+    <style>
+      .note {
+        margin-bottom: 20px;
+        cursor: pointer;
+        transition: max-height 0.3s ease;
+        overflow: hidden;
+        max-height: 50px; /* Adjust as per your need */
+      }
+      .note-title {
+        font-weight: bold;
+      }
+      .note-content {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .expanded {
+        max-height: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="notesList">
+      <!-- Notes will be dynamically added here -->
+    </div>
+
+    <script>
+      const notes = [
+        {
+          title: "Meeting 1",
+          content:
+            "Discuss project status and assign tasks Discuss project status and assign tasks Discuss project status and assign tasks",
+          actionItems: ["Follow up with client", "Prepare presentation"],
+          created: new Date().toLocaleString(),
+        },
+        {
+          title: "Meeting 2",
+          content:
+            "Review budget and plan for next quarter Discuss project status and assign tasks Discuss project status and assign tasks Discuss project status and assign tasks",
+          actionItems: ["Analyze expenses", "Contact vendors for discounts"],
+          created: new Date().toLocaleString(),
+        },
+      ];
+
+      const notesList = document.getElementById("notesList");
+
+      notes.forEach((note) => {
+        const noteElement = document.createElement("div");
+        noteElement.classList.add("note");
+
+        const titleElement = document.createElement("div");
+        titleElement.classList.add("note-title");
+        titleElement.textContent = note.title;
+
+        const contentElement = document.createElement("div");
+        contentElement.classList.add("note-content");
+        contentElement.textContent = note.content;
+
+        noteElement.appendChild(titleElement);
+        noteElement.appendChild(contentElement);
+
+        noteElement.addEventListener("click", () => {
+          noteElement.classList.toggle("expanded");
+        });
+
+        notesList.appendChild(noteElement);
+      });
+    </script>
+  </body>
+</html>

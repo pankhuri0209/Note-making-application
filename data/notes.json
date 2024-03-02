@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Meeting 1",
+    "content": "The project status meeting will entail a comprehensive review of the current progress, challenges encountered, and upcoming milestones. Following the discussion, tasks will be allocated to team members based on their expertise and availability to ensure efficient execution and timely completion of project objectives.",
+    "actionItems": ["Follow up with client", "Prepare presentation"],
+    "created": "1st Aug 2020"
+  },
+  {
+    "title": "Meeting 2",
+    "content": "Review budget and plan for next quarter will entail a comprehensive review of the current progress, challenges encountered, and upcoming milestones. Following the discussion, tasks will be allocated to team members based on their expertise and availability to ensure efficient execution and timely completion of project objectives.",
+    "actionItems": ["Analyze expenses", "Contact vendors for discounts"],
+    "created": "1st Sept 2022"
+  }
+]
